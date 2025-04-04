@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogging Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="#auth">Login</a></li>
+            <li><a href="#blog">Blog</a></li>
+        </ul>
+    </nav>
+
+    <div id="auth">
+        <h2>Login / Sign Up</h2>
+        <input type="text" id="username" placeholder="Enter username">
+        <button onclick="login()">Login</button>
+        <p id="welcome"></p>
+        <button onclick="logout()" style="display:none;">Logout</button>
+    </div>
+    
+    <div id="blog" style="display:none;">
+        <input type="file" id="imageUpload" accept="image/*">
+        <h2>Create a Blog Post</h2>
+        <input type="text" id="title" placeholder="Post Title">
+        <textarea id="content" placeholder="Write something..."></textarea>
+        <button onclick="createPost()">Post</button>
+        
+        <h2>All Blog Posts</h2>
+        <div id="posts"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
